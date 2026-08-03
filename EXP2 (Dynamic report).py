@@ -1,8 +1,8 @@
 # Dynamic report generator (Experiment 2)
 
 def bold_text(func):
-    def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
+    def wrapper(title, content):
+        result = func(title, content)
         return "**" + result + "**"
     return wrapper
 
