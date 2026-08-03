@@ -40,16 +40,16 @@ def main():
     report.add_template("simple", simple_template)
     report.add_template("fancy", fancy_template)
 
-    report = report("Sales Report", "Total sales: $5000")
+    r = report("The sales report", "Total sales are: ₹5000")
 
-    print("Simple Report:")
-    print(report("simple"))
+    print("The generated simple report:")
+    print(r("simple"))
 
-    print("\nFancy Report:")
-    print(report("fancy"))
+    print("\nThe generated fancy report:")
+    print(r("fancy"))
 
-    print("\nDefault Report:")
-    print(report)
+    print("\nThe default report:")
+    print(r)
 
 if __name__ == "__main__":
     main()
